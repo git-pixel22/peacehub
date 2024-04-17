@@ -7,10 +7,20 @@
     <link rel="stylesheet" href="../../output.css">
     <style>
         body {
-            background: url('../../backgrounds/forest.gif');
-            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
             overflow: hidden;
-            background-size: cover;
+            position: relative; /* Necessary for z-index */
+        }
+        video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1; /* Ensure video is behind other content */
         }
         .container {
             display: flex;
@@ -26,6 +36,12 @@
     </style>
 </head>
 <body>
+    <video autoplay muted loop id="video-background">
+        <source src="../../backgrounds/forest.mp4" type="video/mp4">
+        <!-- Include additional source elements for different video formats if needed -->
+        Your browser does not support the video tag.
+    </video>
+
     <div class="container">
         <div class="meditation-text animate-pulse font-semibold" id="meditationText">Inhale...</div>
     </div>
