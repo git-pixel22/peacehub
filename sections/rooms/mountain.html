@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guided Meditation</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../output.css">
     <style>
         body {
-            background-color: #f7fafc;
+            background: url('../../backgrounds/mountain.gif');
+            background-repeat: no-repeat;
+            background-size: cover;
         }
         .container {
             display: flex;
@@ -16,8 +18,9 @@
             height: 100vh;
         }
         .meditation-text {
-            font-size: 3rem;
+            font-size: 4rem;
             text-align: center;
+            color: white;
         }
     </style>
 </head>
@@ -26,7 +29,7 @@
         <div class="meditation-text animate-pulse font-semibold" id="meditationText">Inhale...</div>
     </div>
 
-    <audio id="backgroundMusic" src="path/to/peaceful_music.mp3" loop></audio>
+    <audio id="backgroundMusic" src="../../sounds/mountain.mp3" loop></audio>
 
     <script>
         const textElement = document.getElementById('meditationText');
