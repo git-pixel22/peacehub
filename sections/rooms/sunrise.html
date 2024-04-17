@@ -7,7 +7,10 @@
     <link rel="stylesheet" href="../../output.css">
     <style>
         body {
-            background-color: #f7fafc;
+            background: url('../../backgrounds/sunrise.jpg');
+            background-repeat: no-repeat;
+            overflow: hidden;
+            background-size: cover;
         }
         .container {
             display: flex;
@@ -16,8 +19,9 @@
             height: 100vh;
         }
         .meditation-text {
-            font-size: 3rem;
+            font-size: 4rem;
             text-align: center;
+            color: white;
         }
     </style>
 </head>
@@ -26,7 +30,7 @@
         <div class="meditation-text animate-pulse font-semibold" id="meditationText">Inhale...</div>
     </div>
 
-    <audio id="backgroundMusic" src="path/to/peaceful_music.mp3" loop></audio>
+    <audio id="backgroundMusic" src="../../sounds/sunrise.mp3" loop></audio>
 
     <script>
         const textElement = document.getElementById('meditationText');
